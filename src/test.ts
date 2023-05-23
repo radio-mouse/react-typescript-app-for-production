@@ -1,0 +1,1 @@
+export const someFn = (): string => 'hello ts'; 
