@@ -11,6 +11,8 @@ const buildConfig = (options: IBuildOptions): Configuration => {
   const { mode, paths } = options;
   const { entry, output, template } = paths;
 
+  const isDev = mode === EBuildMode.Dev;
+
   return {
     mode,
     entry,
@@ -20,9 +22,9 @@ const buildConfig = (options: IBuildOptions): Configuration => {
       clean: true,
     },
     plugins: plugins(template),
-    module: { rules },
+    module: { rules: rules(isDev) },
     resolve,
-    devtool: mode === EBuildMode.Dev && 'inline-source-map',
+    devtool: isDev && 'inline-source-map',
     devServer,
   };
 };
