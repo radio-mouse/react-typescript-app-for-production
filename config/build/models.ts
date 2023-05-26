@@ -13,3 +13,7 @@ export interface IBuildOptions {
   mode: EBuildMode;
   paths: IBuildPaths;
 }
+
+export interface IEnv {
+  mode: EBuildMode;
+}

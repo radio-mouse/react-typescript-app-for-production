@@ -2,7 +2,7 @@ import { resolve } from 'path';
 
 import buildConfig from './config/build/config';
 
-import { EBuildMode } from './config/build/models';
+import { IEnv } from './config/build/models';
 
 const paths = {
   entry: resolve(__dirname, 'src', 'index.ts'),
@@ -10,6 +10,4 @@ const paths = {
   template: resolve(__dirname, 'public', 'index.html'),
 };
 
-const config = buildConfig({ mode: EBuildMode.Dev, paths });
-
-export default config;
+export default ({ mode }: IEnv) => buildConfig({ mode, paths });

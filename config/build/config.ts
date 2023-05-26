@@ -1,10 +1,11 @@
 import { Configuration } from "webpack";
 
-import { IBuildOptions } from "./models";
+import { EBuildMode, IBuildOptions } from "./models";
 
 import plugins from "./plugins";
 import resolve from "./resolve";
 import rules from "./rules";
+import devServer from "./devServer";
 
 const buildConfig = (options: IBuildOptions): Configuration => {
   const { mode, paths } = options;
@@ -21,6 +22,8 @@ const buildConfig = (options: IBuildOptions): Configuration => {
     plugins: plugins(template),
     module: { rules },
     resolve,
+    devtool: mode === EBuildMode.Dev && 'inline-source-map',
+    devServer,
   };
 };
 

@@ -1,1 +1,1 @@
-export const someFn = (): string => 'hello ts'; 
+export const someFn = (): string => 'test';
