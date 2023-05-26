@@ -1,28 +1,15 @@
-import { ProgressPlugin, Configuration } from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-
 import { resolve } from 'path';
 
-const config: Configuration = {
-  mode: 'development',
+import buildConfig from './config/build/config';
+
+import { EBuildMode } from './config/build/models';
+
+const paths = {
   entry: resolve(__dirname, 'src', 'index.ts'),
-  output: {
-    filename: '[name].[contenthash].js',
-    path: resolve(__dirname, 'dist'),
-    clean: true,
-  },
-  plugins: [
-    new HtmlWebpackPlugin({ template: resolve(__dirname, 'public', 'index.html') }),
-    new ProgressPlugin(),
-  ],
-  module: {
-    rules: [
-        { test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/ },
-    ]
-  },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
-  }
+  output: resolve(__dirname, 'dist'),
+  template: resolve(__dirname, 'public', 'index.html'),
 };
+
+const config = buildConfig({ mode: EBuildMode.Dev, paths });
 
 export default config;
