@@ -1,7 +1,8 @@
 import { FC } from "react";
 
-import './style.scss';
+import Heading from "../Heading";
 
-const App: FC = () => <h1>Hello, <span>world!</span></h1>;
+
+const App: FC = () => <Heading />;
 
 export default App;
