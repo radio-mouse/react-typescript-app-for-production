@@ -2,8 +2,8 @@ import { FC } from "react";
 
 import classes from './Heading.module.scss';
 
-const { text } = classes;
+const { heading } = classes;
 
-const Heading: FC = () => <h1 className={text}>hello <span>world</span></h1>
+const Heading: FC<{ text: string}> = ({ text }) => <h1 className={heading}>hello <span>{text}</span></h1>
 
 export default Heading;

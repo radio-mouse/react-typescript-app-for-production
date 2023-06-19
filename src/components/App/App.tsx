@@ -1,8 +1,18 @@
-import { FC } from "react";
+import { FC, Suspense } from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Heading from "../Heading";
+import HomeAsync from "../../Pages/Home";
+import TestAsync from "../../Pages/Test";
 
-
-const App: FC = () => <Heading />;
+const App: FC = () => (
+  <BrowserRouter>
+    <Suspense fallback="Loading">
+      <Routes>
+        <Route path="/" element={<HomeAsync />} />
+        <Route path="/test" element={<TestAsync />} />
+      </Routes>
+    </Suspense>
+  </BrowserRouter>
+);
 
 export default App;
