@@ -7,6 +7,8 @@ export interface IBuildPaths {
   entry: string;
   output: string;
   template: string;
+  components: string;
+  pages: string;
 }
 
 export interface IBuildOptions {

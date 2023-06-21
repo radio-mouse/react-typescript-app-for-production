@@ -1,8 +1,8 @@
-import { FC, Suspense } from "react";
+import { FC, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import HomeAsync from "./pages/Home";
-import TestAsync from "./pages/Test";
+import HomeAsync from 'pages/Home';
+import TestAsync from 'pages/Test';
 
 const App: FC = () => (
   <BrowserRouter>

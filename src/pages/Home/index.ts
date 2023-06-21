@@ -1,5 +1,5 @@
-import { lazy } from "react";
+import { lazy } from 'react';
 
-const TestAsync =  lazy(() => import('./Home'));
+const TestAsync = lazy(() => import('./Home'));
 
 export default TestAsync;

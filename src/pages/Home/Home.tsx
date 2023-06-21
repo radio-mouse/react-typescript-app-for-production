@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 
-import Heading from '../../components/Heading/Heading';
+import Heading from 'components/Heading';
 
 const Home: FC = () => (
   <>

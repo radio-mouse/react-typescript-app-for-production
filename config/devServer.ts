@@ -1,4 +1,4 @@
-import { Configuration } from "webpack-dev-server";
+import { Configuration } from 'webpack-dev-server';
 
 const devServer: Configuration = {
   port: 3000,

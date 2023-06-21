@@ -1,6 +1,5 @@
-import { loader } from "mini-css-extract-plugin";
-import { RuleSetRule } from "webpack";
-import { resolve } from 'path';
+import { loader } from 'mini-css-extract-plugin';
+import { RuleSetRule } from 'webpack';
 
 const rules = (isDev: boolean): RuleSetRule[] => [
   { test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/ },
@@ -14,11 +13,11 @@ const rules = (isDev: boolean): RuleSetRule[] => [
           modules: {
             auto: /module\.scss/,
             localIdentName: isDev ? '[path][name]_[local]' : '[hash:base64:8]',
-          }
+          },
         },
       },
-      'sass-loader'
-    ]
+      'sass-loader',
+    ],
   },
 ];
 
