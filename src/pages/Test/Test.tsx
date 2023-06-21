@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import Heading from 'components/Heading';
+// import Heading from 'components/Heading';
 
 const Test: FC = () => <Heading text="Test" />;
 
