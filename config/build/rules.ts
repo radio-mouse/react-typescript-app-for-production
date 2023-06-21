@@ -12,7 +12,7 @@ const rules = (isDev: boolean): RuleSetRule[] => [
         loader: 'css-loader',
         options: {
           modules: {
-            auto: /\.module\.scss/,
+            auto: /module\.scss/,
             localIdentName: isDev ? '[path][name]_[local]' : '[hash:base64:8]',
           }
         },

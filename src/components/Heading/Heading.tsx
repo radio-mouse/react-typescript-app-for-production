@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import classes from './Heading.module.scss';
+import classes from './module.scss';
 
 const { heading } = classes;
 
