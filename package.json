@@ -43,7 +43,7 @@
     "react-router-dom": "^6.13.0"
   },
   "lint-staged": {
-    "*.ts, *.tsx": [
+    "*.{ts,tsx}": [
       "eslint --fix --max-warnings=0"
     ]
   }
