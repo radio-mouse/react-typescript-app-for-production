@@ -1,3 +1,5 @@
+@import 'vars';
+
 *,
 *::before,
 *::after {
@@ -27,7 +29,9 @@ dd {
 }
 
 body {
-  min-height: 100vh;
+  background-color: var(--color-off-white);
+  color: var(--color-dark-brown);
+  font-family: 'Yellix', sans-serif;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
 }
@@ -52,4 +56,22 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+#root {
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 100dvh;
+}
+
+main {
+  padding: 40px 28px;
+  position: relative;
+  flex-grow: 1;
+  max-width: 100%;
+  overflow: hidden;
+
+  @media screen and (max-width: 1024px) {
+    padding: 24px 16px;
+  }
 }

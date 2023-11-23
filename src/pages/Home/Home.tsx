@@ -1,13 +1,6 @@
+import Title from 'components/Title';
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
 
-import Heading from 'components/Heading';
-
-const Home: FC = () => (
-  <>
-    <Link to="/test">test</Link>
-    <Heading text="Home" />
-  </>
-);
+const Home: FC = () => <Title text="Hello World" />;
 
 export default Home;

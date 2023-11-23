@@ -1,18 +1,19 @@
 import { FC, Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
+
+import { ROUTE_HOME } from 'constants/routes';
 
 import HomeAsync from 'pages/Home';
-import TestAsync from 'pages/Test';
 
 const App: FC = () => (
-  <BrowserRouter>
-    <Suspense fallback="Loading">
+  <main>
+    <Suspense fallback={<span>Loading...</span>}>
       <Routes>
-        <Route path="/" element={<HomeAsync />} />
-        <Route path="/test" element={<TestAsync />} />
+        <Route index element={<HomeAsync />} />
+        <Route path="*" element={<Navigate to={ROUTE_HOME} replace />} />
       </Routes>
     </Suspense>
-  </BrowserRouter>
+  </main>
 );
 
 export default App;

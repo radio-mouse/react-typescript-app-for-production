@@ -1,6 +1,7 @@
 export enum EBuildMode {
   Dev = 'development',
   Prod = 'production',
+  Stage = 'staging',
 }
 
 export interface IBuildPaths {
@@ -9,6 +10,10 @@ export interface IBuildPaths {
   template: string;
   components: string;
   pages: string;
+  constants: string;
+  assets: string;
+  helpers: string;
+  store: string;
 }
 
 export interface IBuildOptions {

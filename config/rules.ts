@@ -3,6 +3,8 @@ import { RuleSetRule } from 'webpack';
 
 const rules = (isDev: boolean): RuleSetRule[] => [
   { test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/ },
+  { test: /\.(svg)$/, use: ['@svgr/webpack', 'url-loader'] },
+  { test: /\.(webp)$/, use: [{ loader: 'file-loader', options: {} }] },
   {
     test: /\.(scss|css)$/,
     use: [
