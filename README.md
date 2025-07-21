@@ -1,9 +1,9 @@
-# G:H Web Admin App
+# React production app
 
 ## Instalation process
 ```
-git clone git@bitbucket.org:chrisryuichi/guidehuman-admin-web.git
-cd guidehuman-admin-web
+git clone git@github.com:radio-mouse/react-typescript-app-for-production.git
+cd react-typescript-app-for-production
 yarn install
 ```
 
